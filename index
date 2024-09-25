@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mental Health Care Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles for the login popup */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Simple styling for buttons */
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #6a7edc;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #4e5ea8;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px;
+            background-color: white;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        section h2 {
+            color: #6a7edc;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        section h3 {
+            color: black;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6a7edc;
+            color: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #473fbf;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #473fbf;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: breathAnimation 8s infinite;
+        }
+
+        @keyframes breathAnimation {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.5); }
+            50% { transform: scale(2); }
+            75% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+
+        .instructions {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FF5733;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f2f2f2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>MECare <3</h1>
+ 	<h2>Welcome to Mental Health Care Support</h2>
+        <button id="loginBtn">Login</button> <!-- Login Button -->
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#self-assessment">Self-Assessment</a></li>
+            <li><a href="#chatbot">MyChat</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#emergency-help">Emergency Help</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2>Introduction</h2>
+        <p>Welcome to our mental health support platform. We are dedicated to providing the tools and resources you need to manage your mental well-being.</p>
+        <p>Our mission is to provide accessible mental health care support to everyone in need. Whether you’re looking for tools to manage stress, resources on mental health, or virtual counseling services, we are here to help you every step of the way. Your mental well-being matters.</p>
+        <img src="C:\Users\Geetika Jain Saxena\Desktop\mental_health_website\reason-people-feel-anxious-even-there-is-no-reason.png" /> 
+
+        <p>Anxiety is characterised by feelings of tension, concerned thoughts, and bodily changes such as a raised blood pressure. Anxiety may be difficult even when things are going well. However, when it appears unexpectedly, it can be even more difficult to manage.<p>
+        <p>Anxiety is a common mental health condition that affects millions of individuals throughout the world. While recognisable factors can often trigger anxiety, many people experience it for no apparent reason. This issue is more common than we understand, leaving people irritated, puzzled, and looking for answers. Everyone experiences unprovoked anxiety at times. Your nervous system activates the fight-or-flight response based on perceived threats – but sometimes, it misreads harmless situations as dangerous.</p>
+        <p>But what about those times when you suddenly feel anxious for no reason? Perhaps you wake up in the middle of the night with a heavy fear in your stomach and are unable to fall back asleep. However, nothing is genuinely 'wrong'. It's easy to feel caught off guard in those moments, unsure of what's producing the worry or how to deal with it.</p>
+        <br>
+        <h3><b>So, If You Have Nothing To Worry About, Why Are You Feeling So Anxious For No Reason?</b></h3>
+        <p>Anxiety may not always be linked to external factors, as a study in the Journal of Clinical Psychology found that around 50% of anxiety cases have no identifiable cause. Understanding the 'why' behind anxiety is the first step towards managing it, and understanding the layers of the issue is crucial for effective treatment.</p>
+        <br>
+        <h3><b>Reasons for Unseen Anxiety:</b></h3>
+        <p>Anxiety is not a one-size-fits-all experience. We are all distinct individuals, with diverse experiences, histories, and bodies. This means that the underlying cause of your anxiety may differ from the triggers that make your best friend or neighbour nervous. Still, there are certain common culprits to examine.</p>
+        <br>
+        <h3><b>Anxiety Disorders:</b></h3>
+        <p>Anxiety disorders, such as generalized anxiety disorder (GAD), are mental illnesses in which anxiety is the primary symptom. It's like having an alarm system that constantly sounds off when there's no real threat. If you are frequently nervous and it interferes with your everyday life, you should consult a healthcare specialist to see if an anxiety condition is the main cause. Please don't hesitate to seek assistance when you need it.</p>
+        <br>
+        <h3><b>Genetics:</b></h3>
+        <p>According to research, if anxiety runs in your family, you may be more likely to develop it. It's not fate, of course, but understanding your family history may help explain your anxiousness. It can also provide you with valuable information that will allow you to be proactive in treating your anxiety.</p>
+        <br>
+        <h3><b>Trauma from The Past And Intrusive Memories:</b></h3>
+        <p>Our brains are capable of retaining a large number of memories and experiences throughout our lifetimes, especially if those memories or former experiences were very tough. Even when you're not thinking about it, traumatic events from your past might rise to the surface and cause anxiety. It is as if your brain is attempting to protect you from a threat that no longer exists. If trauma and intrusive memories are impeding your capacity to live your life and cause sadness, stress, or worry, please seek help from a therapist or medical professional. Help is available. Don't suffer alone.</p>
+        <br>
+        <h3><b>Certain Foods And Drinks:</b></h3>
+        <p>Ever notice how you feel after your third cup of coffee? Or if you have skipped a meal? Your diet might have a big impact on your anxiety levels. Excess coffee or alcohol, as well as a lack of balanced meals, might make you feel jittery and agitated. Keep track of everything you're eating and drinking, and note whether any specific meals or beverages make you feel uneasy.</p>
+        <br>
+        <h3><b>Physical Health Problems:</b></h3>
+        <p>The body and mind are inextricably linked. Anxiety can be triggered by health disorders such as heart disease, diabetes, or hormone abnormalities. Even something as simple as not getting enough sleep might put you on edge. If you're constantly concerned and don't know why, it's always a good idea to consult your doctor. symptom. If you are frequently nervous and it interferes with your daily life, this could be the underlying cause.'</p>
+        <br>
+        <h3><b>The Future:</b></h3>
+        <p>Many people experience anxiety because they are afraid about the future. Political issues, bad media conjecture, the fear of climate change (eco-anxiety exists), and other topics. Our brains are continuously on the watch for threats to our safety, and because the future is so unpredictable, our nervous systems might occasionally go into overdrive to protect against potential dangers.</p>
+        <br>
+        <h3><b>Life Stressors</b></h3>
+        <p>Stress from numerous life events, even ones that seem unnecessary, can accumulate over time and contribute to anxiety. This can include chronic work stress, interpersonal issues, or recurrent financial troubles. These pressures can set off the body's 'fight or flight' response, resulting in anxiety feelings. These causes may appear little on their own, but when combined, they can cause significant worry.</p>
+        <br>
+        <h3><b>Lifestyle</b></h3>
+        <p>Modern life's constant connectivity, social media exposure, uncertainty, and lack of self-care contribute to anxiety due to constant connectivity, rapid environment changes, and neglect of mental and physical well-being.</p>
+        <p>Everyone experiences unprovoked anxiety at times. Your nervous system activates the fight-or-flight response based on perceived threats – but sometimes, it misreads harmless situations as dangerous. When your body reacts strongly, yet you can’t pinpoint an obvious trigger, it may seem like anxiety has arisen randomly. Many people could be unaware of their triggers and believe they have become anxious for no reason.</p>
+        <p>Managing anxiety necessitates a comprehensive strategy that includes self-help strategies such as mindfulness, journaling, exercise, grounding techniques, self-care, nature, creative expression, cognitive-behavioral techniques, emotional regulation, social support, lifestyle changes, and supplements. These tactics aid in symptom reduction, pattern identification, and problem-solving ability development. Emotional regulation, acceptance, and release strategies can all be effective. Therapy, medicine, and lifestyle modifications are all possible forms of professional assistance.</p>
+
+
+    <!-- Resources Section -->
+<section id="resources">
+    <h2>Resources</h2>
+
+    <!-- Educational Articles Subsection -->
+    <h3>Articles</h3>
+    <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4409431/" target="_blank">Mental Illness Is Like Any Other Illness</a></li>
+        <li><a href="https://www.pinerest.org/newsroom/articles/mental-health-awareness-blog/" target="_blank">The Importance Of Mental Health</a></li>
+        <li><a href="https://www.health.harvard.edu/topics/mental-health" target="_blank">Mental Health Options</a></li>
+    </ul>
+
+    <!-- Newsletters Subsection -->
+    <h3>Newsletters</h3>
+    <ul>
+        <li><a href="https://example.com/newsletter1" target="_blank">Monthly Mental Health Newsletter</a></li>
+        <li><a href="https://example.com/newsletter2" target="_blank">Weekly Self-Care Tips</a></li>
+    </ul>
+
+    <!-- Blogs Subsection -->
+    <h3>Blogs</h3>
+    <ul>
+        <li><a href="https://www.verywellmind.com/the-best-mental-health-blogs-5205192" target="_blank">The Best Mental Health Blogs</a></li>
+        <li><a href="https://www.mindindia.org/blogs" target="_blank">Mind India</a></li>
+        <li><a href="https://mpowerminds.com/blog" target="_blank">Mental Health Blogs</a></li>
+    </ul>
+
+    <!-- Videos Subsection -->
+    <h3>Videos</h3>
+    <ul>
+        <li><a href="https://youtu.be/DxIDKZHW3-E?si=iREkwdIDETSpZoj1" target="_blank">We All Have Mental Health</a></li>
+        <li><a href="https://youtu.be/m9_7hKjABIE?si=sGExmmgRq1gwHDno" target="_blank">Health Stigma and Discrimination: A Global, Cross-cutting Research Approach</a></li>
+        <li><a href="https://youtu.be/geT9sNLReG0?si=Y8FPqyKn3sLNP9rP" target="_blank">Tools for supporting emotional wellbeing in children and youth</a></li>
+    </ul>
+</section>
+
+
+    <!-- Self-Assessment Section -->
+    <section id="self-assessment">
+        <h2>Self-Assessment</h2>
+        <p>Take our quick self-assessment to get a better understanding of your mental health status.</p>
+      
+        <h1>Breathing Exercise Game</h1>
+        <div class="circle"></div>
+        
+        <div class="instructions">
+            <p id="breatheText">Breathe In...</p>
+        </div>
+
+        <script>
+            let breatheText = document.getElementById("breatheText");
+            let breatheState = true;
+
+            setInterval(() => {
+                if (breatheState) {
+                    breatheText.innerHTML = "Breathe Out...";
+                } else {
+                    breatheText.innerHTML = "Breathe In...";
+                }
+                breatheState = !breatheState;
+            }, 4000);  // Switches text every 4 seconds
+        </script>
+
+        <h1>Gratitude Journal</h1>
+        <p>Write down something you're grateful for:</p>
+
+        <input type="text" id="gratitudeInput" placeholder="I'm grateful for...">
+        <button onclick="addGratitude()">Add to Journal</button>
+
+        <ul id="gratitudeList"></ul>
+
+        <script>
+            function addGratitude() {
+                let input = document.getElementById("gratitudeInput").value;
+                if (input !== "") {
+                    let li = document.createElement("li");
+                    li.textContent = input;
+                    document.getElementById("gratitudeList").appendChild(li);
+                    document.getElementById("gratitudeInput").value = ""; // Clear input field
+                }
+            }
+        </script>
+
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot">
+        <h2>MyChat</h2>
+        <p>Our chatbot is here to provide instant support and answer any questions you might have regarding mental health.</p>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs">
+        <h2>Programs</h2>
+        <p>Discover our mental health programs designed to help you manage stress, anxiety, and other mental health concerns.</p>
+    </section>
+
+    <!-- Emergency Help Section -->
+    <section id="emergency-help">
+        <h2>Emergency Help</h2>
+        <p>If you're in a crisis, please reach out to emergency services or helplines for immediate assistance.</p>
+
+        <p>When Can We Seek Help?
+           India's mental health care landscape is changing, but more work is needed to address existing issues and provide complete, accessible care. Although anxiety is normal, if it becomes overwhelming and you have tried unsuccessfully to reduce it on your own, it may be time to seek mental health professionals through helplines or visit hospitals.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Mental Health Care Support. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var popup = document.getElementById("loginPopup");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("loginBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            popup.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            popup.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+
+        // Prevent form submission for demonstration
+        document.getElementById("loginForm").onsubmit = function(event) {
+            event.preventDefault();
+            alert("Login functionality not implemented.");
+        }
+    </script>
+
+</body>
+</html>
